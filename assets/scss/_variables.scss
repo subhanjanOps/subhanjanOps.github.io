@@ -1,0 +1,11 @@
+$font-family-sans-serif: 'Work Sans', sans-serif !default;
+$primary: #141A46;
+$secondary: #ffab50;
+
+$headings: $secondary;
+$btn-font-weight: 700;
+$btn-font-size: 17px;
+$border-radius: 0;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";

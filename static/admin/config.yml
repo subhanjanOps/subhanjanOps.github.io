@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: master
+  site_domain: https://neveenaferrao.netlify.com/
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+    - label: "Home section"
+      name: "home"
+      format: 'json'
+      file: "assets/content/home.json"
+      fields:
+        - {label: Quote, name: quote, widget: string}
+        - {label: Resume, name: resume, widget: string}
+    - label: "About section"
+      name: "about"
+      format: 'json'
+      file: "assets/content/about.json"
+      fields:
+        - {label: Title, name: title, widget: markdown}
+        - {label: content, name: content, widget: markdown}
+    - label: "Work section"
+      name: "work"
+      format: 'json'
+      file: "assets/content/work.json"
+      fields:
+        - {label: Title, name: title, widget: markdown}
+        - {label: text, name: text, widget: markdown}
+    - label: "Contact section"
+      name: "contact"
+      format: 'json'
+      file: "assets/content/contact.json"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Quote, name: quote, widget: string}
+        # - {label: Author, name: author, widget: string}
+

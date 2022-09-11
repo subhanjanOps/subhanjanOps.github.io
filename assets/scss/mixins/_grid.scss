@@ -1,0 +1,58 @@
+@import "~bootstrap/scss/mixins/grid";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+@mixin _make-gutter($gutter) {
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+}
+
+@mixin _make-row($gutter: $grid-gutter-width) {
+    @include make-row();
+    margin-right: ($gutter / -2);
+    margin-left: ($gutter / -2);
+    > .col,
+    > [class^=col-],
+    > .col-auto {
+        @include _make-gutter($gutter);
+    }
+}
+
+@mixin make-xs-column($width, $gutter: $grid-gutter-width) {
+    @include make-col-ready();
+    @include media-breakpoint-up(xs) {
+        @include make-col($width);
+        @include _make-gutter($gutter);
+    }
+}
+
+@mixin make-sm-column($width, $gutter: $grid-gutter-width) {
+    @include make-col-ready();
+    @include media-breakpoint-up(sm) {
+        @include make-col($width);
+        @include _make-gutter($gutter);
+    }
+}
+
+@mixin make-md-column($width, $gutter: $grid-gutter-width) {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+        @include make-col($width);
+        @include _make-gutter($gutter);
+    }
+}
+
+@mixin make-lg-column($width, $gutter: $grid-gutter-width) {
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+        @include make-col($width);
+        @include _make-gutter($gutter);
+    }
+}
+
+@mixin make-xl-column($width, $gutter: $grid-gutter-width) {
+    @include make-col-ready();
+    @include media-breakpoint-up(xl) {
+        @include make-col($width);
+        @include _make-gutter($gutter);
+    }
+}

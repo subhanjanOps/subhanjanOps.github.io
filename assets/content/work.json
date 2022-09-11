@@ -1,0 +1,4 @@
+{
+  "title": "My <strong>work</strong>",
+  "text": "<p>\n\nMost of my work was done as a part of an organisation so it can't be shared publicly. Now, while this page is in the works let's start with technologies used on this site. It uses Nuxt.js (Vue Framework), Bootstrap4 (Scss), Netlify CMS and is hosted on Netlify. The codebase is on my GitHub <a href=\"https://github.com/neveena/portfolio-site-nuxt-app\" target=\"_blank\" rel=\"external noreferrer\">neveenaferrao/portfolio-site-nuxt-app</a>.\n\nYou can also <a href=\"/Neveena-Frontend_Developer.pdf\" download>download</a> a copy of my resume and check my  <a href=\"https://github.com/neveena\" target=\"_blank\" rel=\"external noreferrer\">GitHub</a> for other projects.\n\n</p>\n\n<p>\n\nIf you're not convinced or just curious about some of my other work, feel free to send me a mail at <a href=\"mailto:neveena.praveen@gmail.com\">neveena.praveen@gmail.com</a>.\n\n</p>"
+}

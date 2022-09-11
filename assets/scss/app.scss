@@ -1,0 +1,91 @@
+@import 'variables';
+@import 'vendor/bootstrap';
+@import 'mixins/mixins';
+
+.page-enter-active, .page-leave-active {
+    transition: opacity .5s;
+}
+
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
+h2 {
+    font-size: 35px;
+    @include media-breakpoint-up(md) {
+        font-size: 40px;
+    }
+}
+
+.btn-custom {
+    border: 2px solid $headings;
+    color: $headings;
+    position: relative;
+    padding: 15px;
+
+    &:before {
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        top: -0.1em;
+        z-index: -1;
+        height: 108%;
+        position: absolute;
+        pointer-events: none;
+        background-color: $secondary;
+        transform: translateX(-101%);
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &:hover {
+        color: $primary;
+        &:before {
+            transform: translateX(0px);
+            border: 2px solid $headings;
+        }
+    }
+}
+.onepage-pagination li a {
+    &:before {
+        width: 7px;
+        height: 7px;
+    }
+    &.active:before {
+        left: 8px;
+        margin-top: -3px;
+        width: 12px;
+        height: 12px;
+    }
+}
+.viewing-page-2,
+.viewing-page-3 {
+    .onepage-pagination li a {
+        &:before {
+            background-color: $primary;
+        }
+
+        &.active:before {
+            border: 2px solid $primary;
+            background-color: transparent;
+        }
+    }
+}
+
+.viewing-page-1,
+.viewing-page-4 {
+    .onepage-pagination li a {
+        &:before {
+            background-color: $secondary;
+        }
+        &.active:before {
+            border: 2px solid $secondary;
+            background-color: transparent;
+        }
+    }
+}
+
+input.form-control {
+    height: 45px;
+}
